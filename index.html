@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Прогноз погоды</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/main.js" defer type="module"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="header__weather-title">Погода в городе <span class="header__city">Екатеринбург</span></h1>
+				<div class="header__current-weather">
+					<div class="header__weather">
+						<img class="header__weather-img" alt="" data-header-weather-icon>
+						<div class="header__data">
+							<p class="header__temperature"><span data-header-temperature></span> °C</p>
+							<p class="header__day-state"><span data-header-week-day></span>, <span
+									data-header-hour></span>:00</p>
+							<p class="header__day-state" data-header-weather-description></p>
+						</div>
+					</div>
+					<div class="header__more-info">
+						<p class="header__precipitation">Вероятность осадков: <span data-precipitation></span>%</p>
+						<p class="header__humidity">Влажность: <span data-humidity></span>%</p>
+						<p class="header__wind">Ветер: <span data-wind></span> км/ч</p>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="main-info">
+					<ul class="main-info__weather-blocks" data-blocks-container></ul>
+				</section>
+			</main>
+			<template data-weather-block-template>
+				<li class="main-info__weather-block">
+					<p class="main-info__week-day" data-week-day></p>
+					<img class="main-info__weather-img" alt="" data-weather-icon>
+					<div class="main-info__temperatures">
+						<p class="main-info__day-temperature"><span data-day-temperature></span> °C</p>
+						<p class="main-info__night-temperature"><span data-night-temperature></span> °C</p>
+					</div>
+				</li>
+			</template>
+		</div>
+	</div>
+</body>
+
+</html>
